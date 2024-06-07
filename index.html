@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contactos</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Vincula los iconos de FontAwesome -->
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal -->
+        <nav class="sidebar"> <!-- Barra lateral -->
+            <h1>Agenda</h1><br>
+            <button id="bubbly-button">Favoritos</button> <!-- Botón para mostrar favoritos -->
+            <div id="favoritesList" class="favorites"></div> <!-- Contenedor de favoritos -->
+        </nav>
+        <main class="content"> <!-- Contenido principal -->
+            <header>
+                <h2>Contactos</h2>
+                <button id="addContactBtn">Agregar Contacto</button> <!-- Botón para agregar contactos -->
+            </header>
+            <div id="contactList" class="contact-list"></div> <!-- Lista de contactos -->
+        </main>
+    </div>
+
+    <!-- Ventana modal para editar contacto -->
+    <div id="editContactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Contacto</h2>
+            <form id="editContactForm">
+                <label for="editName">Nombre:</label>
+                <input type="text" id="editName" name="editName" required><br><br>
+                <label for="editPhone">Teléfono:</label>
+                <input type="text" id="editPhone" name="editPhone" required><br><br>
+                <label for="editEmail">Correo:</label>
+                <input type="email" id="editEmail" name="editEmail" required><br><br>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ventana modal para agregar contacto -->
+    <div id="addContactModal" class="modal">
+        <div class="modal-content add-contact">
+            <span class="close">&times;</span>
+            <h2>Agregar Contacto</h2>
+            <form id="addContactForm">
+                <label for="addName">Nombre:</label>
+                <input type="text" id="addName" name="addName" required><br><br>
+                <label for="addPhone">Teléfono:</label>
+                <input type="text" id="addPhone" name="addPhone" required><br><br>
+                <label for="addEmail">Correo:</label>
+                <input type="email" id="addEmail" name="addEmail" required><br><br>
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Wilfredo Pereira - Carnet: 088524 - Año: 2024</p>
+        <p>&copy; 2024 Wilfredo Pereira</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Vincula el archivo JavaScript -->
+</body>
+</html>
